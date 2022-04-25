@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Sitio de Ventas">
+    <meta name="keywords" content="ecommerce">
+    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <title> Tienda Actis </title>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="containerNav">
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <!-- Brand -->
+                <a class="navbar-brand mr-5" href="./index.html">Coder SHOP</a>
+
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <div class="navbar-nav float-right w-100 justify-content-between">
+
+                        <button class="btn btn-primary">
+                            <a href="./index.html" class="text-white"><span class="spinner-grow spinner-grow-sm"></span>
+                                Continuar comprando </a>
+                        </button>
+
+
+
+                        <a href="#" class="btn border colorNumber ">
+                            <i class="fas fa-shopping-cart text-primary "></i>
+                            <span class="badge" id="contadorCarrito">0</span>
+                        </a>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+
+    </header>
+    <!-- FIN DE NAV-->
+
+
+    <main>
+        <br> <br> <br> <br>
+        <div class="contenedorCarrito">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Item</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Acción</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="items"></tbody>
+                <tfoot>
+                    <tr id="footer">
+                        <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <template id="template-footer">
+            <th scope="row" colspan="2">Total productos</th>
+            <td>10</td>
+            <td>
+                <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                    vaciar todo
+                </button>
+            </td>
+            <td class="font-weight-bold">$ <span>5000</span></td>
+        </template>
+
+        <template id="template-carrito">
+            <tr>
+                <th scope="row">id</th>
+                <td>Café</td>
+                <td>1</td>
+                <td>
+                    <button class="btn btn-info btn-sm btn-ajusta">
+                        +
+                    </button>
+                    <button class="btn btn-danger btn-sm btn-ajusta">
+                        -
+                    </button>
+                </td>
+                <td>$ <span>500</span></td>
+            </tr>
+        </template>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
+    </script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" async></script>
+    <script src="./js/carrito.js"></script>
+
+</body>
+
+</html>
